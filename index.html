@@ -15,34 +15,35 @@
 
             </div>
             <div class="col-md-8">
-            <div id="timer"></div>
+            <div class="showTimer"></div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script type="text/javascript" src="assets/javascript/app.js"></script>
                 <h1>Beer Snob Trivia</h1>
                 <h4>Which of these beers is considered a "dark beer"?</h4>
-                <form>
-                    <input class="darkBeerW" type="radio" name="darkBeer" value="Wheat Ale"> Wheat Ale<br>
-                    <input class="darkBeerW" type="radio" name="darkBeer" value="American Pale Ale"> American Pale Ale<br>
-                    <input class="darkBeerC" type="radio" name="darkBeer" value="Stout"> Stout
-                </form>
+                <form id="form">
+                    <input class="W" type="radio" name="darkBeer" value="W"> Wheat Ale<br>
+                    <input class="W" type="radio" name="darkBeer" value="W"> American Pale Ale<br>
+                    <input class="C" type="radio" name="darkBeer" value="C"> Stout
+                
                 <h4>When did humans begin brewing beer?</h4>
-                <form>
-                    <input type="radio" name="year" value="3900"> 3900 years ago<br>
-                    <input type="radio" name="year" value="6000"> 6000 years ago<br>
-                    <input type="radio" name="year" value="1580"> 1580 years ago
-                </form>
+                
+                    <input class="C" type="radio" name="year" value="C"> 3900 years ago<br>
+                    <input class="W" type="radio" name="year" value="W"> 6000 years ago<br>
+                    <input class="W" type="radio" name="year" value="W"> 1580 years ago
+                
                 <h4>Which of these is a brewery located in Atlanta?</h4>
-                <form>
-                    <input type="radio" name="local" value="Breckenridge"> Breckenridge<br>
-                    <input type="radio" name="local" value="Bell's"> Bell's<br>
-                    <input type="radio" name="local" value="Second Self"> Second Self
-                </form>
+                
+                    <input class="W" type="radio" name="local" value="W"> Breckenridge<br>
+                    <input class="W" type="radio" name="local" value="W"> Bell's<br>
+                    <input class="C" type="radio" name="local" value="C"> Second Self
+                
                 <h4>Which of these beers is considered a sour?</h4>
-                <form>
-                    <input type="radio" name="Sour" value="Porter"> Porter<br>
-                    <input type="radio" name="Sour" value="Pilsner"> Pilsner<br>
-                    <input type="radio" name="Sour" value="Gose"> Gose
+                
+                    <input class="W" type="radio" name="Sour" value="W"> Porter<br>
+                    <input class="W" type="radio" name="Sour" value="W"> Pilsner<br>
+                    <input class="C" type="radio" name="Sour" value="C"> Gose
                 </form>
+                <button id="submit">Submit</button>
             </div>
             <div class="col-md-2">
 
