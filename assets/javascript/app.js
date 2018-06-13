@@ -73,14 +73,11 @@ clearInterval(intervalId);
                 console.log(wrongAnswers);
                 console.log(unanswered);
                 };
-            $("#submit").click(function() {
-                event.preventDefault();
-                endtimer();
-                console.log("I work!")
+            $(".container").on("click", "#submit", function() {
+                endTimer();
+                $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");
+
             });
-            $(document).click(function() {
-                console.log($(this))
-            })
 
                 run();
 
