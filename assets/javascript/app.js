@@ -1,3 +1,6 @@
+$("#button").click(function() {
+    console.log("Hello, I am a functioning code.");
+    });
 var seconds = 10;
 var intervalId;
 var wrongAnswers = 0;
@@ -13,9 +16,12 @@ function decrement() {
 
     if (seconds === 0) {
         endTimer();
-        //$(document.body).html("<h2>Correct Answers:</h2>" + correctAnswers + "<h2>Wrong Answers:</h2>" + wrongAnswers + "<h2>Unanswered:</h2>" + unanswered );
-        $(".showTimer").append("<h2>Correct Answers:</h2>" + "<h2> Wrong Answers:</h2>" + "<h2> Unanswered:</h2>");
+        $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");
     }
+    /*else if($("#submit").clicked === true) {
+        endTimer();
+        $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");    
+    }*/
 
 }
 
@@ -24,31 +30,59 @@ function endTimer() {
 clearInterval(intervalId);
 //tracking answers 
 
-    if(form.elements[2].checked || form.elements[3].checked || form.elements[8] || form.elements[11].checked) {
+    if($('input[name=darkBeer]:checked').val() === "C") {
     correctAnswers++;
     }
-    else if(form.elements[0].checked || form.elements[1].checked || form.elements[4].checked || form.elements[5].checked || form.elements[6].checked || form.elements[7].checked || form.elements[9].checked || form.elements[10].checked) {
+    else if($('input[name=darkBeer]:checked').val() === "W") {
         wrongAnswers++;
     }
     else{
         unanswered++;
     }
-    console.log(correctAnswers);
-    console.log(wrongAnswers);
-    console.log(unanswered);
-    };
-/*switch(unanswered) {
-    case 'form.elements[2].checked': 
-    case 'form.elements[3].checked':
-    case 'form.elements[8].checked':
-    case 'form.elements[11].checked':*/
 
+    if($('input[name=year]:checked').val() === "C") {
+        correctAnswers++;
+        }
+        else if($('input[name=year]:checked').val() === "W") {
+            wrongAnswers++;
+        }
+        else{
+            unanswered++;
+        }
 
-run();
+        if($('input[name=local]:checked').val() === "C") {
+            correctAnswers++;
+            }
+            else if($('input[name=local]:checked').val() === "W") {
+                wrongAnswers++;
+            }
+            else{
+                unanswered++;
+            }
 
-//$("#button").click(function() {
-//$(".showTimer").append("<h2>Correct Answers:</h2>" + "<h2> Wrong Answers:</h2>" + "<h2> Unanswered:</h2>");
-//});
+            if($('input[name=sour]:checked').val() === "C") {
+                correctAnswers++;
+                }
+                else if($('input[name=sour]:checked').val() === "W") {
+                    wrongAnswers++;
+                }
+                else{
+                    unanswered++;
+                }
+                console.log(correctAnswers);
+                console.log(wrongAnswers);
+                console.log(unanswered);
+                };
+            $("#submit").click(function() {
+                event.preventDefault();
+                endtimer();
+                console.log("I work!")
+            });
+            $(document).click(function() {
+                console.log($(this))
+            })
+
+                run();
 
 
 
