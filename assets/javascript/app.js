@@ -1,6 +1,4 @@
-$("#button").click(function() {
-    console.log("Hello, I am a functioning code.");
-    });
+
 var seconds = 40;
 var intervalId;
 var wrongAnswers = 0;
@@ -74,9 +72,7 @@ clearInterval(intervalId);
                 $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <br> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
 
             });
-                $("document").on("click", "#start", function() {
-                    run();
-                });
+            run();
 
                  
            
