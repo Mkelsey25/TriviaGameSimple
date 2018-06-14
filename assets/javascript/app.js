@@ -16,12 +16,8 @@ function decrement() {
 
     if (seconds === 0) {
         endTimer();
-        $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");
+        $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <br> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
     }
-    /*else if($("#submit").clicked === true) {
-        endTimer();
-        $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");    
-    }*/
 
 }
 
@@ -73,9 +69,12 @@ clearInterval(intervalId);
                 console.log(wrongAnswers);
                 console.log(unanswered);
                 };
-            $(".container").on("click", "#submit", function() {
+                //$("document").on("click", "#start", function() {
+                   // window.location.href="index.html";
+                //});
+                $(".container").on("click", "#submit", function() {
                 endTimer();
-                $(".showTimer").append("<h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2>");
+                $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <br> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
 
             });
 
