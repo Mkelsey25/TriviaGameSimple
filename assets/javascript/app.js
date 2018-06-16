@@ -1,6 +1,6 @@
 $(document).ready(function() {
 $(".container").on("click", ".startGame", function() {
-    //Dynamically create questions in the html
+    //Dynamically create questions, answers, and submit button in the html.
     $(".col-md-8").append("<h4>Which of these beers is considered a dark beer?</h4>");
     $(".col-md-8").append("<form>");
     $("form").attr("id", "form");
