@@ -38,12 +38,12 @@ intervalId = setInterval(decrement, 1000);
 }
 function decrement() {
     seconds--;
-    $(".showTimer").html("<h2>" + seconds + "</h2>");
+    $(".showTimer").html("<h2>" + seconds + " seconds left!" + "</h2>");
 
     if (seconds === 0) {
         endTimer();
-        $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
-    }
+        $(".col-md-8").empty();
+        $(".col-md-8").append("<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");    }
 
 }
 
@@ -97,7 +97,8 @@ clearInterval(intervalId);
                 };
                 $(".container").on("click", "#submit", function() {
                 endTimer();
-                $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
+                $(".col-md-8").empty();
+                $(".col-md-8").append("<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
 
             });
         });
