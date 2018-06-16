@@ -20,12 +20,14 @@ $(".container").on("click", ".startGame", function() {
     $("#form").append(('<input type="radio" class="W" name="sour" value="W" />' + "Pilsner" + "<br>"));
     $("#form").append(('<input type="radio" class="C" name="sour" value="C" />' + "Gose"));
     $(".col-md-8").append("<button>Submit</button>");
+    $(".startGame").remove();
     $("button").attr("id", "submit");
+    $("button").attr("class", "btn btn-primary btn-lg");
 
     run();
 });
 
-var seconds = 15;
+var seconds = 40;
 var intervalId;
 var wrongAnswers = 0;
 var correctAnswers = 0;
@@ -40,7 +42,7 @@ function decrement() {
 
     if (seconds === 0) {
         endTimer();
-        $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <br> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
+        $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
     }
 
 }
@@ -95,7 +97,7 @@ clearInterval(intervalId);
                 };
                 $(".container").on("click", "#submit", function() {
                 endTimer();
-                $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <br> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
+                $(".container").html("<style> * { text-align: center;} </style>" + "<br> <h1>Beer Snob Trivia</h1> <br> <h2>Correct Answers:" + correctAnswers + "</h2>" + "<h2> Wrong Answers:" + wrongAnswers + "</h2>" + "<h2> Unanswered:" + unanswered + "</h2> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>");
 
             });
         });
